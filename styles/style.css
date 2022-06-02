@@ -1,0 +1,540 @@
+* {
+  font-size: 16px;
+  font-family: 'Kumbh Sans', sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  cursor: crosshair;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+body {
+  background-color: #272727;
+}
+
+.virtualBackground {
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-image: url(../images/bg.jpg);
+  background-size: cover;
+  background-blend-mode: color-burn;
+  background-color: #272727;
+  /* end of main Box */
+}
+
+.virtualBackground .mainBox {
+  -webkit-box-shadow: 1px 0 0.6rem #fefefe;
+          box-shadow: 1px 0 0.6rem #fefefe;
+  background-color: #fefefe;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: (1fr)[6];
+  -ms-grid-columns: (1fr)[11];
+      grid-template: repeat(6, 1fr)/repeat(11, 1fr);
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 12;
+  grid-column: 3 / 15;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 2;
+  grid-row: 2 / 4;
+  max-width: 1440px;
+  overflow: hidden;
+  height: 40rem;
+  border: 2px black solid;
+  border-radius: 0.5rem;
+  /* end of header */
+}
+
+.virtualBackground .mainBox header {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1 / 2;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1 / 2;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -ms-flex-item-align: start;
+      -ms-grid-row-align: start;
+      align-self: start;
+  -ms-grid-column-align: self-start;
+      justify-self: self-start;
+  margin-left: 1.9rem;
+  margin-top: 1.9rem;
+}
+
+.virtualBackground .mainBox header .logoBox {
+  cursor: alias;
+  width: 2.6rem;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0.5rem;
+  background-color: #272727;
+  color: #fff;
+  border-radius: 0.2rem;
+  font-weight: 900;
+  position: relative;
+  z-index: 5;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.virtualBackground .mainBox header .logoBox #logo__firstPart p {
+  -webkit-writing-mode: vertical-lr;
+      -ms-writing-mode: tb-lr;
+          writing-mode: vertical-lr;
+  color: red;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+  text-transform: uppercase;
+}
+
+.virtualBackground .mainBox header .logoBox #logo__firstPart p:hover::first-letter {
+  color: #fefefe;
+}
+
+.virtualBackground .mainBox header .logoBox #logo__secondPart {
+  left: 1.9rem;
+  position: absolute;
+  text-align: center;
+  font-weight: 300;
+  display: none;
+}
+
+.virtualBackground .mainBox .lefSideMenu {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1 / 2;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 6;
+  grid-row: 1 / 7;
+  -webkit-writing-mode: vertical-lr;
+      -ms-writing-mode: tb-lr;
+          writing-mode: vertical-lr;
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+  text-align: center;
+  -ms-grid-column-align: start;
+      justify-self: start;
+  -ms-flex-item-align: stretch;
+      -ms-grid-row-align: stretch;
+      align-self: stretch;
+  letter-spacing: 0.2rem;
+  border: none;
+  font-weight: 300;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.virtualBackground .mainBox .lefSideMenu ul {
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.virtualBackground .mainBox .lefSideMenu ul:hover {
+  cursor: pointer;
+  border-right: 1px solid black;
+  background-color: #272727;
+}
+
+.virtualBackground .mainBox .lefSideMenu ul:hover a {
+  color: #fff;
+}
+
+.virtualBackground .mainBox .lefSideMenu ul:hover .material-symbols-outlined {
+  color: #fff;
+  -webkit-animation: slideOutRight 1s infinite;
+          animation: slideOutRight 1s infinite;
+}
+
+.virtualBackground .mainBox .rightSideMenu {
+  -ms-grid-column: 11;
+  -ms-grid-column-span: 2;
+  grid-column: 11 / 13;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 6;
+  grid-row: 1 / 7;
+  -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  text-align: center;
+  letter-spacing: 0.3rem;
+  -ms-grid-column-align: end;
+      justify-self: end;
+  -ms-flex-item-align: stretch;
+      -ms-grid-row-align: stretch;
+      align-self: stretch;
+  border: none;
+  font-weight: 300;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.virtualBackground .mainBox .rightSideMenu ul {
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.virtualBackground .mainBox .rightSideMenu ul:hover {
+  cursor: pointer;
+  border-right: 1px solid black;
+  -ms-grid-column-align: self-start;
+      justify-self: self-start;
+  background-color: #272727;
+}
+
+.virtualBackground .mainBox .rightSideMenu ul:hover a {
+  color: #fff;
+}
+
+.virtualBackground .mainBox .rightSideMenu ul:hover .material-symbols-outlined {
+  color: #fff;
+  -webkit-animation: slideOutRight 1s infinite;
+          animation: slideOutRight 1s infinite;
+}
+
+.virtualBackground .mainBox .bottomMenu {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 12;
+  grid-column: 1 / 13;
+  -ms-grid-row: 6;
+  -ms-grid-row-span: 1;
+  grid-row: 6 / 7;
+  text-align: center;
+  letter-spacing: 0.2rem;
+  -ms-flex-item-align: end;
+      -ms-grid-row-align: end;
+      align-self: end;
+  border: none;
+  font-weight: 300;
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+  -webkit-transition: all 500ms;
+  transition: all 500ms;
+}
+
+.virtualBackground .mainBox .bottomMenu ul {
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.virtualBackground .mainBox .bottomMenu ul:hover {
+  cursor: pointer;
+  border-right: 1px solid black;
+  -ms-grid-column-align: self-start;
+      justify-self: self-start;
+  background-color: #272727;
+}
+
+.virtualBackground .mainBox .bottomMenu ul:hover a {
+  color: #fff;
+}
+
+.virtualBackground .mainBox .bottomMenu ul:hover .material-symbols-outlined {
+  color: #fff;
+  -webkit-animation: slideOutUp 1s infinite;
+          animation: slideOutUp 1s infinite;
+}
+
+.virtualBackground .mainBox .helloBox {
+  -ms-grid-column: 6;
+  -ms-grid-column-span: 1;
+  grid-column: 6 / 7;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1 / 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.virtualBackground .mainBox .helloBox #heWord {
+  font-size: 4rem;
+  letter-spacing: 0.5rem;
+  font-family: 'Gochi Hand', cursive;
+}
+
+.virtualBackground .mainBox .helloBox #lloWord {
+  margin-top: 0.5rem;
+  letter-spacing: 0.3rem;
+  font-weight: 900;
+  font-size: 6rem;
+  font-family: 'Gochi Hand', cursive;
+}
+
+.virtualBackground .mainBox .avatarBox {
+  -ms-grid-column: 6;
+  -ms-grid-column-span: 1;
+  grid-column: 6 / 7;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 2;
+  grid-row: 2 / 4;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+.virtualBackground .mainBox .avatarBox #profilePicture {
+  max-width: 10rem;
+  max-height: 20rem;
+  border-radius: 100%;
+  border: 0.1rem #272727 solid;
+}
+
+.virtualBackground .mainBox .bioBox {
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 3;
+  grid-column: 3 / 6;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 3;
+  grid-row: 2 / 5;
+}
+
+.virtualBackground .mainBox .detailInfo {
+  -ms-grid-column: 7;
+  -ms-grid-column-span: 3;
+  grid-column: 7 / 10;
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 2;
+  grid-row: 3 / 5;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+.virtualBackground .mainBox .detailInfo #name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.virtualBackground .mainBox .detailInfo #name #name__first {
+  font-family: 'Bebas Neue', cursive;
+  color: rgba(0, 0, 0, 0.8);
+  font-size: 1.4rem;
+  margin: 0 0.05rem 0 0.34rem;
+}
+
+.virtualBackground .mainBox .briefInfo .tagline {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.virtualBackground .mainBox .briefInfo .tagline h2 {
+  font-family: 'Bebas Neue', cursive;
+  color: rgba(0, 0, 0, 0.8);
+  font-size: 1.4rem;
+  margin: 0 0.05rem 0 0.34rem;
+}
+
+.virtualBackground .mainBox .briefInfo .social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.virtualBackground .mainBox .briefInfo .social img {
+  max-width: 100%;
+}
+
+.virtualBackground .mainBox .contactTextBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 3rem;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 3;
+  grid-row: 2 / 5;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 4;
+  grid-column: 2 / 6;
+}
+
+.virtualBackground .mainBox .contactTextBox h1 {
+  text-align: center;
+  font-size: 4rem;
+}
+
+.virtualBackground .mainBox .contactTextBox .hDivider {
+  border: 0.2rem solid #272727;
+}
+
+.virtualBackground .mainBox .contactTextBox p {
+  text-align: justify;
+  padding: 0 1rem;
+}
+
+.virtualBackground .mainBox .contactTextBox .social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.virtualBackground .mainBox .contactTextBox .social img {
+  max-width: 100%;
+}
+
+.virtualBackground .mainBox .locationBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  text-align: center;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 3;
+  grid-row: 2 / 5;
+  -ms-grid-column: 6;
+  -ms-grid-column-span: 3;
+  grid-column: 6 / 9;
+}
+
+.virtualBackground .mainBox .locationBox .locationCap p {
+  font-size: 2rem;
+  -ms-flex-item-align: start;
+      -ms-grid-row-align: start;
+      align-self: start;
+}
+
+.virtualBackground .mainBox .locationBox .locationCap img {
+  color: red;
+  max-width: 20px;
+}
+
+.virtualBackground .mainBox .locationBox #locationMap {
+  max-width: 100%;
+  height: 20rem;
+  padding: 0 1rem;
+  border: none;
+  border-top-left-radius: 0.7rem;
+  border-top-right-radius: 0.7rem;
+}
+
+.virtualBackground .mainBox .locationBox .availability {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 100%;
+  opacity: 0.8;
+}
+
+.virtualBackground .mainBox .linkedinBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 2;
+  grid-row: 3 / 5;
+  -ms-grid-column: 9;
+  -ms-grid-column-span: 2;
+  grid-column: 9 / 11;
+}
+
+.virtualBackground .mainBox .linkedinBox .linkedin a {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.virtualBackground .mainBox .linkedinBox .linkedinSummary {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+}
+/*# sourceMappingURL=style.css.map */
